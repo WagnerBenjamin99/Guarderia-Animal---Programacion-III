@@ -11,8 +11,8 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "{ nombre='" + nombre + '\'' +
-                ", dni=" + dni +
-                ", direccion='" + direccion + '}';
+        return "Nombre: " + nombre +
+                "\nDNI: " + dni +
+                "\nDireccion: " + direccion;
     }
 }

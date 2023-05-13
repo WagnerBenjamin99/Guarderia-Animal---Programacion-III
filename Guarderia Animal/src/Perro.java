@@ -11,7 +11,7 @@ public class Perro extends Animal{
 
     @Override
     public String toString() {
-        return super.toString() + ", raza " + this.raza + "}";
+        return "Raza: " + this.raza +  super.toString();
     }
 
 }
