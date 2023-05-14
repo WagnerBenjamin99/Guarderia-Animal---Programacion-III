@@ -105,6 +105,8 @@ public class Main {
 
         boolean flagSexo = false;
         do {
+            System.out.println("[M] MACHO");
+            System.out.println("[H] HEMBRA");
             System.out.print("Sexo: ");
             sexo = InputValidator.ingresarChar();
             if(!"M".equalsIgnoreCase(String.valueOf(sexo)) && !"H".equalsIgnoreCase(String.valueOf(sexo))){
@@ -185,10 +187,14 @@ public class Main {
             System.out.println("Ingrese la posicion en la lista: ");
             posicion = InputValidator.ingresarEntero();
 
-            if (posicion >= 0 && posicion < listaAnimales.size()) {
+            if(listaAnimales.size() == 0){
+                System.out.println("No hay mascotas para retirar");
+                break;
+            }
+            else if (posicion >= 0 && posicion < listaAnimales.size()) {
                 flag = true;
                 ((ArrayList<Animal>) listaAnimales).remove((int)posicion);
-                System.out.println(listaAnimales);
+
             }
             else System.out.println("Posicion incorrecta, vuelva a ingresar");
         }while(!flag);
